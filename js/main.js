@@ -28,15 +28,27 @@
 
 //Ejercicio 3
 
-function numeroPrimo(num1){
-    var num1 = parseInt(prompt("Dame un numero"))
-    if(num1 / num1 === 1 & num1 / 1 === num1){
-        console.log("true");
-    }else{
-        console.log("false");
-    }
+// function numeroPrimo(num1){
+//     var num1 = parseInt(prompt("Dame un numero"))
+//     if(num1 / num1 === 1 & num1 / 1 === num1){
+//         console.log("true");
+//     }else{
+//         console.log("false");
+//     }
     
 
-}
+// }
 
-numeroPrimo()
+// numeroPrimo()
+
+//Ejercicio 4
+
+function factorial(fact){
+    var x = 1
+    var fact = parseInt(prompt("Dame un numero"))
+    for (var i = 1; i <= fact; i++){
+        x *= i
+    }
+    console.log(x);
+}
+factorial()
