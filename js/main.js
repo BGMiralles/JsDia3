@@ -35,7 +35,6 @@
 //     }else{
 //         console.log("false");
 //     }
-    
 
 // }
 
@@ -59,13 +58,13 @@
 //     var float1 = parseFloat(prompt("Dame un numero, puede tener decimales"))
 //     var bin = ""
 //     while(float1 / 2  !== 1){
-//         bin = float1 / 2 
+//         bin = float1 / 2
 //     }
 //     console.log(bin);
 // }
 // binario()
 
-//Ejercicio 6 
+//Ejercicio 6
 
 // var num1 = parseInt(prompt("Dame un numero"))
 // console.log(num1);
@@ -74,7 +73,7 @@
 //     console.log(numst);
 //     console.log(numst.length);
 // }
-// cifras(num1)    
+// cifras(num1)
 
 //Ejercicio 7
 
@@ -124,24 +123,52 @@
 
 //Ejercicio 9
 
-let arrNum = []
-let lenArr = parseInt(prompt("Cuantos numeros quieres que tenga el array, en numero entero"))
+// let arrNum = []
+// let lenArr = parseInt(prompt("Cuantos numeros quieres que tenga el array, en numero entero"))
 
-function rellenarArr(lenArr){
-    for (let i = 0; i < lenArr; i++) 
-        arrNum.push((Math.random() * 9)) 
-    }
+// function rellenarArr(lenArr){
+//     for (let i = 0; i < lenArr; i++)
+//         arrNum.push((Math.random() * 9))
+//     }
 
-function mostrarArr(arr){
-    for( let i = 0; i < lenArr; i++){
-        console.log(`${arrNum[i]}`)
+// function mostrarArr(arr){
+//     for( let i = 0; i < lenArr; i++){
+//         console.log(`${arrNum[i]}`)
+//     }
+// }
+
+// function sumarArr(arr){
+
+// }
+
+// rellenarArr(lenArr)
+// mostrarArr(arrNum)
+// // console.log(arrNum);
+
+//Ejercicio 10
+
+let arrNum = [];
+let lenArr = parseInt(
+  prompt("Cuantos numeros quieres que tenga el array, en numero entero")
+);
+
+function primMax(lenArr) {
+  while (arrNum.length < lenArr) {
+    let x = Math.random() * 10;
+    x = Math.round(x);
+    if ((x / 1 === x) & (x / x === 1)) {
+      arrNum.push(x);
     }
+  }
+  let max = 0;
+  for (let i = 0; i < arrNum.length; i++) {
+    if (arrNum[i] > max) {
+      max = arrNum[i];
+    }
+  }
+
+  return max;
 }
 
-function sumarArr(arr){
-    
-}
-
-rellenarArr(lenArr)
-mostrarArr(arrNum)
-// console.log(arrNum);
+console.log(primMax(lenArr));
+console.log(arrNum)
