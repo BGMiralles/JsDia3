@@ -147,28 +147,54 @@
 
 //Ejercicio 10
 
-let arrNum = [];
-let lenArr = parseInt(
-  prompt("Cuantos numeros quieres que tenga el array, en numero entero")
-);
+// let arrNum = [];
+// let lenArr = parseInt(
+//   prompt("Cuantos numeros quieres que tenga el array, en numero entero")
+// );
 
-function primMax(lenArr) {
-  while (arrNum.length < lenArr) {
-    let x = Math.random() * 10;
-    x = Math.round(x);
-    if ((x / 1 === x) & (x / x === 1)) {
-      arrNum.push(x);
-    }
-  }
-  let max = 0;
-  for (let i = 0; i < arrNum.length; i++) {
-    if (arrNum[i] > max) {
-      max = arrNum[i];
-    }
-  }
+// function primMax(lenArr) {
+//   while (arrNum.length < lenArr) {
+//     let x = Math.random() * 10;
+//     x = Math.round(x);
+//     if ((x / 1 === x) & (x / x === 1)) {
+//       arrNum.push(x);
+//     }
+//   }
+//   let max = 0;
+//   for (let i = 0; i < arrNum.length; i++) {
+//     if (arrNum[i] > max) {
+//       max = arrNum[i];
+//     }
+//   }
 
-  return max;
+//   return max;
+// }
+
+// console.log(primMax(lenArr));
+
+//Ejercicio 11
+
+
+
+function arrayGeneration(lenArr){
+    
+    let arrNum = [];
+    let arrNum2 = [];
+    let arrNum3 = []
+    let lenArrIn = parseInt(prompt("Dime cuantos numeros quieres que tenga los arrays"))
+
+    for (let i = 0; i < lenArrIn; i++) {
+        let x = Math.random() * 10;
+        x = Math.round(x);
+        arrNum.push(x)
+    }for(let i = 0; i < lenArrIn; i++){
+        arrNum2.push(arrNum[Math.floor((Math.random() * lenArrIn))])
+    }for(let i = 0; i < lenArrIn; i++){
+        arrNum3.push(arrNum[i] * arrNum2[i])
+    }
+    return console.log(arrNum, arrNum2, arrNum3);
+    
 }
 
-console.log(primMax(lenArr));
-console.log(arrNum)
+console.log(arrayGeneration());
+
